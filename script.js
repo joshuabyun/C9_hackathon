@@ -161,19 +161,19 @@ function createDomPage4(){
     }
 }
 
-var map;
-var infowindow;
+var map2;
+var infowindow2;
 var object_list;
 
 function initMap() {
     clearMain();
     var mapsize = $('<div>').attr('id', 'map').appendTo('.main');
-    map = new google.maps.Map(document.getElementById('map'), {
+    map2 = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 33.6839, lng: -117.7947},
         zoom: 12
     });
-    infowindow = new google.maps.InfoWindow();//
-    var service = new google.maps.places.PlacesService(map); //constructor
+    infowindow2 = new google.maps.InfoWindow();//
+    var service = new google.maps.places.PlacesService(map2); //constructor
     service.nearbySearch({
         location: {lat: 33.6839, lng: -117.7947}, //use brian's plug in location object
         radius: 7000,//radius in meters
