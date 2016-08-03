@@ -35,27 +35,16 @@ div{
     color: white;
     text-align: center;
 }
-/*html, body {*/
-    /*height: 100%;*/
-    /*margin: 0;*/
-    /*padding: 0;*/
-/*}*/
+
+
+
+/*Page 4*/
 #map {
     display:block;
     height: 80vh;
     width:80vw;
     border:1px solid black;
 }
-
-
-
-
-/*!*Page 4*!*/
-/*.eventBtns{*/
-    /*background-color:lightblue;*/
-    /*border:1px red solid;*/
-    /*height:40vh;*/
-/*}*/
 
 
 
