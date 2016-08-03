@@ -161,9 +161,31 @@ function createDomPage4(){
     }
 }
 
+var map;
+var infowindow;
+var object_list;
 
-
-
+function initMap() {
+    clearMain();
+    var mapsize = $('<div>').attr('id', 'map').appendTo('.main');
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 33.6839, lng: -117.7947},
+        zoom: 12
+    });
+    infowindow = new google.maps.InfoWindow();//
+    var service = new google.maps.places.PlacesService(map); //constructor
+    service.nearbySearch({
+        location: {lat: 33.6839, lng: -117.7947}, //use brian's plug in location object
+        radius: 7000,//radius in meters
+        type: ['restaurant'],//variables for this keyword. use parameter
+    }, callback);
+    function callback(results, status) {
+        if (status === google.maps.places.PlacesServiceStatus.OK) {
+            object_list = results;
+            console.log(object_list);//this gives objects of searched places in an array (from line 37 - 41 and calls this function);
+        }
+    }
+}
 
 
 
@@ -222,13 +244,7 @@ function createDomPage5(){
 function initialize(location) {
     console.log(location);
 
-    var mapOptions = {
-        center: new google.maps.LatLng(-34.397, 150.644),
-        zoom: 8,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
 
-    map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
 }
 //End of google maps function
 
