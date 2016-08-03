@@ -176,6 +176,7 @@ function clickeventChoices(){
         createDomPage5();
     } else {
         clearMain();
+        initMap();
         createDomPage4();
     }
 }
@@ -197,6 +198,9 @@ function clickEventBtns () {
     createDomPage5();
 }
 
+// function loadApi() {
+//     google.load("maps", "3", {"callback" : initMap(), "other_params" : "sensor=true&libraries=places&sensors=true&key=AIzaSyDOspr_uHd4zw5GmVIGt4q-qMGXMmghV0s"});
+// }
 var map2;
 var infowindow2;
 var object_list;
