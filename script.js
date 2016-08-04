@@ -146,7 +146,7 @@ function geocodeAddress(){
 
 function createDomPage2 (){
     for (var i=0; i < 6; i++){
-        var dateDiv = $('<div>').addClass('dateBtns col-sm-4 col-xs-6');
+        var dateDiv = $('<div>').addClass('dateBtns col-sm-4 col-xs-4');
         $(dateDiv).click(clickDateBtns);
         $('.main').append(dateDiv);
         var dateContainer = $('<div>').addClass('dateContainers').attr('id', 'second' +i);
@@ -161,9 +161,6 @@ function createDomPage2 (){
 
     }
 
-
-
-
 }
 
 
@@ -173,6 +170,8 @@ function getNames(id) {
         method: 'get',
         datatype: 'json',
         url: 'http://uinames.com/api/',
+        gender: '',
+        region: 'United States',
         success: function (result) {
             firstName = result.name;
             lastName = result.surname;
@@ -197,7 +196,7 @@ function getPersonImages(id) {
             method: 'flickr.photos.search',
             api_key: '4291af049e7b51ff411bc39565109ce6',
             nojsoncallback: '1',
-            text: 'person male closeup',
+            text: 'person, single, guys, adult, closeup',
             sort: 'relevance',
             format: 'json',
             cache: false
