@@ -5,10 +5,22 @@ body {
 
 .header {
     text-align: center;
-    background-color: #b71c1c;
+    background-color: #0277BD;
     color: #ffffff;
     box-shadow: 0 10px 6px -6px gray;
     font-family:'Roboto', sans-serif;
+}
+
+#title > div > h1{
+    font-size: 1.8em;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin:0;
+}
+#title > div {
+    font-size: 1.5em;
+    color: #ffffff;
+    font-weight: 100;
 }
 
 h1 {
@@ -121,15 +133,4 @@ h1 {
 #final_2 {
     width: 100%;
     height: 100%;
-}
-#title > div > h1{
-    font-size: 2em;
-    color: black;
-    text-transform: uppercase;
-    margin:0;
-    font-weight: bold;
-}
-#title > div {
-    font-size: 2em;
-    color: black;
 }
