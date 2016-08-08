@@ -98,7 +98,7 @@ function createDomPage1() {
         $('.choice2').css('background-image','url(images/surprise.png)');
     }
     if ($('.nameContainers').hasClass('doggy2')){
-        $('.doggy2').text('SURPRISE ME!')
+        $('.doggy2').text('Surprise Me')
     }
 }
 

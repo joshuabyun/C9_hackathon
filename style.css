@@ -1,10 +1,9 @@
 body {
-    background-color: #ffffff;
+    background-color: #dddedd;
     font-family:'Roboto', sans-serif;
 }
 
 .header {
-    text-align: center;
     background-color: #0277BD;
     color: #ffffff;
     box-shadow: 0 10px 6px -6px gray;
@@ -18,25 +17,28 @@ body {
     margin:0;
 }
 #title > div {
-    font-size: 1.5em;
+    font-size: 1.2em;
     color: #ffffff;
     font-weight: 100;
+    padding: 2px 20px;
 }
 
-h1 {
-    font-family:'Roboto', sans-serif;
-    font-size: 200px;
+.main {
+    margin: 20px 0;
+    text-align: center;
 }
+
 /*Page 1*/
 
 /*Page 2*/
 .dateBtns, .finalBtns, .dateChoices, .eventBtns {
     height: 20vh;
+    margin: 1vh 0;
 }
 
 .dateChoicesContainer, .dateContainers , .finalDivContainer, .eventContainers, .eventChoices {
-    height: 90%;
-    background-color: #ef5350;
+    height: 70%;
+    background-color: #0992A3;
     text-align: center;
     box-shadow: 0 10px 6px -6px gray;
     position:relative;
@@ -62,10 +64,7 @@ h1 {
     background-repeat:no-repeat;
     background-position: center;
 }
-/*#final_2 {*/
-    /*height: 500px;*/
-    /*width: 300px;*/
-/*}*/
+
 
 @media only screen and (min-width: 768px){
     .dateBtns, .dateChoices, .eventBtns, .finalBtns {
@@ -84,26 +83,11 @@ h1 {
 }
 
 .nameContainers{
-    background-color: #000000;
-    opacity: 0;
-    transform: translateY(0%);
-    color: #ef5350;
+    background-color: #ffffff;
+    color: #595959;
     font-size: 1.5em;
     position: relative;
-    bottom: 81%;
-    overflow: hidden;
-    text-align: center;
-}
-
-.dateBtns:hover .nameContainers {
-    transform: translateY(-100%);
-    opacity: 1;
-    transition-duration: 0.5s;
-}
-.eventBtns:hover .nameContainers{
-    transform: translateY(-100%);
-    opacity: 1;
-    transition-duration: 0.5s;
+    height: 30%;
 }
 
 .dateContainers {
@@ -111,24 +95,12 @@ h1 {
     background-repeat: no-repeat;
 }
 
-.dateChoicesContainer {
-    background-size:contain;
+.dateChoicesContainer .eventContainers{
+    background-size:80%;
     background-repeat:no-repeat;
     background-position: center;
 }
 
-.dateChoices:hover .nameContainers {
-    transform: translateY(-100%);
-    opacity: 1;
-    transition-duration: 0.5s;
-}
-
-
-.eventContainers {
-    background-size:contain;
-    background-repeat:no-repeat;
-    background-position: center;
-}
 
 #final_2 {
     width: 100%;
