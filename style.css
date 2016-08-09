@@ -41,9 +41,8 @@ body {
     background-color: #0992A3;
     text-align: center;
     box-shadow: 0 10px 6px -6px gray;
-    position:relative;
-    overflow: hidden;
 }
+
 /*Page 3*/
 
 /*Page 4*/
@@ -56,9 +55,9 @@ body {
 
 }
 .finalBtns .nameContainers{
-    opacity: 1;
-    bottom: 11%;
+
 }
+
 .finalDivContainer{
     background-size:cover;
     background-repeat:no-repeat;
