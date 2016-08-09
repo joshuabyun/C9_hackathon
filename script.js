@@ -183,7 +183,7 @@ function getNames(id) {
         method: 'get',
         datatype: 'json',
         data: dataObj,
-        url: 'http://uinames.com/api/',
+        url: 'https://uinames.com/api/',
         success: function (result) {
             // $("#" + id).next().text(firstName + ' ' + lastName);
             for (var i=0; i<6; i++){
