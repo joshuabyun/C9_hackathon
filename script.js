@@ -209,13 +209,15 @@ function getPersonImages() {
         nojsoncallback: '1',
         sort: 'relevance',
         format: 'json',
+        safe_search: 3,
+        content_type: 6,
         cache: false
     };
     if (genderSelect == 'Shiba') {
         dataObj.text = genderSelect + " dog, closeup";
 
     } else if (genderSelect == 'Male'){
-        dataObj.text = genderSelect + " portrait, sexy, man";
+        dataObj.text = genderSelect + " portrait, cute, -boy, -kids, -kid, -woman, -girl, -female, -nipple, man";
     }
 else{
         dataObj.text = genderSelect + " portrait, woman";
