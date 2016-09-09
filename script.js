@@ -421,8 +421,8 @@ function createDomPage5() {
 //Getting google maps for the locations
 function initialize(location) {
     console.log(location);
-    var shibaImage = 'http://orig15.deviantart.net/fb18/f/2011/220/0/e/pixel_shiba_inu_by_babiry-d45xejf.gif';
-    var heartImage = 'http://msnsmileys.net/H/Hearts/animated-heart.gif';
+    var shibaImage = 'images/shiba.gif';
+    var heartImage = 'images/heart.gif';
     var currentLocation = locObj.getLocation();
 
     var lat = finalEvent.geometry.location.lat();
