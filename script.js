@@ -209,13 +209,15 @@ function getPersonImages() {
         nojsoncallback: '1',
         sort: 'relevance',
         format: 'json',
+        safe_search: 3,
+        content_type: 6,
         cache: false
     };
     if (genderSelect == 'Shiba') {
         dataObj.text = genderSelect + " dog, closeup";
 
     } else if (genderSelect == 'Male'){
-        dataObj.text = genderSelect + " portrait, sexy, man";
+        dataObj.text = genderSelect + " portrait, cute, -boy, -kids, -kid, -woman, -girl, -female, -nipple, man";
     }
 else{
         dataObj.text = genderSelect + " portrait, woman";
@@ -421,8 +423,8 @@ function createDomPage5() {
 //Getting google maps for the locations
 function initialize(location) {
     console.log(location);
-    var shibaImage = 'http://orig15.deviantart.net/fb18/f/2011/220/0/e/pixel_shiba_inu_by_babiry-d45xejf.gif';
-    var heartImage = 'http://msnsmileys.net/H/Hearts/animated-heart.gif';
+    var shibaImage = 'images/shiba.gif';
+    var heartImage = 'images/heart.gif';
     var currentLocation = locObj.getLocation();
 
     var lat = finalEvent.geometry.location.lat();
