@@ -67,7 +67,7 @@ function createAddressBar() {
 // PAGE 1 - Date Choice
 function createDomPage1() {
     // var choiceArray = ['Male', 'Female', 'Surprise Me'];
-    var choiceIDArray = ['Male', 'Female', 'Shiba']; // Used to set ID to div so we can use ID for search query input
+    var choiceIDArray = ['male', 'female', 'shiba']; // Used to set ID to div so we can use ID for search query input
     for (var i = 0; i < choiceIDArray.length; i++) {
         var dateChoices = $('<div>').addClass('col-sm-4 dateChoices').click(genderClicked).attr('gender', choiceIDArray[i]);
         $('.main').append(dateChoices);
@@ -176,10 +176,10 @@ function getPersonImages() {
         content_type: 1,
         cache: false
     };
-    if (genderSelect == 'Shiba') {
+    if (genderSelect == 'shiba') {
         dataObj.text = genderSelect + " dog, closeup";
 
-    } else if (genderSelect == 'Male'){
+    } else if (genderSelect == 'male'){
         dataObj.text = genderSelect + ", portrait, -boy, -kids, -kid, -woman, -girl, -female, -nipple, man, profile, -topless, picture, -drawing, model, -shirtless, male";
     }
     else{
