@@ -150,7 +150,7 @@ function getNames(id) {
         method: 'get',
         datatype: 'json',
         data: dataObj,
-        url: 'https://uinames.com/api/',
+        url: 'http://uinames.com/api/',
         success: function (result) {
             for (var i=0; i<6; i++){
                 getNamesArray.push(result[i].name + ' ' + result[i].surname);
