@@ -121,7 +121,7 @@ function genderClicked() {
     setAddress();
     clearMain();
     getPersonImages();
-    getNames();
+    // getNames();
     console.log(genderSelect);
 }
 // PAGE 2 - Date Buttons
