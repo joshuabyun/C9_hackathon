@@ -205,12 +205,16 @@ function getPersonImages() {
                 console.log(image_src);
                 var images = $('<img>').attr('src', image_src).addClass('flickrImg');
                 getPersonImagesArray.push(images);
-                console.log(getPersonImagesArray);
+                console.log(getPersonImagesArray.length);
             }
-            if (getNamesArray.length == 6) {
+            if (getPersonImagesArray.length == 6) {
+                console.log(getPersonImagesArray);
                 createDomPage2();
             }
-
+            // if (getNamesArray.length == 6) {
+            //     console.log(getPersonImagesArray);
+            //     createDomPage2();
+            // }
         }
 
     })
