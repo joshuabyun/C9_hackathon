@@ -56,6 +56,32 @@ function LocationObj(successCallback, errorCallback) {
     };
     nav.getCurrentPosition(success.bind(this), failure);
 }
+function geocodeAddress() {
+    function initMap() {
+        var map = new google.maps.Map(document.getElementById('main'), {
+            zoom: 8,
+            center: {lat: -34.397, lng: 150.644}
+        });
+        var geocoder = new google.maps.Geocoder();
+        document.getElementById('submit').addEventListener('click', function () {
+            geocodeAddress(geocoder, map);
+        });
+    }
+    function geocodeAddress(geocoder, resultsMap) {
+        var address = document.getElementById('address').value;
+        geocoder.geocode({'address': address}, function (results, status) {
+            if (status === 'OK') {
+                resultsMap.setCenter(results[0].geometry.location);
+                var marker = new google.maps.Marker({
+                    map: resultsMap,
+                    position: results[0].geometry.location
+                });
+            } else {
+                alert('Geocode was not successful for the following reason: ' + status);
+            }
+        });
+    }
+}
 function createAddressBar() {
     $('<input>').attr({
         type: 'text',
@@ -90,32 +116,7 @@ function setAddress() {
         myAddressString = '9080 Irvine Center Dr';
     }
 }
-function geocodeAddress() {
-    function initMap() {
-        var map = new google.maps.Map(document.getElementById('main'), {
-            zoom: 8,
-            center: {lat: -34.397, lng: 150.644}
-        });
-        var geocoder = new google.maps.Geocoder();
-        document.getElementById('submit').addEventListener('click', function () {
-            geocodeAddress(geocoder, map);
-        });
-    }
-    function geocodeAddress(geocoder, resultsMap) {
-        var address = document.getElementById('address').value;
-        geocoder.geocode({'address': address}, function (results, status) {
-            if (status === 'OK') {
-                resultsMap.setCenter(results[0].geometry.location);
-                var marker = new google.maps.Marker({
-                    map: resultsMap,
-                    position: results[0].geometry.location
-                });
-            } else {
-                alert('Geocode was not successful for the following reason: ' + status);
-            }
-        });
-    }
-}
+
 function genderClicked() {
     genderSelect = $(this).attr('gender');
     setAddress();
@@ -131,9 +132,9 @@ function createDomPage2() {
         $('.main').append(dateDiv);
         var dateContainer = $('<div>').addClass('dateContainers').attr('id', 'second' + i);
         $(dateContainer).append(getPersonImagesArray[i]);
-        var nameContainer = $('<div>').addClass('nameContainers');
-        $(nameContainer).append(getNamesArray[i]);
-        $(dateDiv).append(dateContainer, nameContainer);
+        //var nameContainer = $('<div>').addClass('nameContainers');
+        //$(nameContainer).append(getNamesArray[i]);
+        $(dateDiv).append(dateContainer);//nameContainer
     }
 }
 //Getting random names function via ajax call
