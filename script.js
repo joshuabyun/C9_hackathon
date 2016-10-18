@@ -322,9 +322,9 @@ function createDomPage5() {
     $('#final_1').css('background-image', 'url('+finalEvent.photos[0].getUrl({maxWidth:1000, maxHeight:1000})+')');
     $('<div>').addClass('nameContainers').text(finalEvent.name).appendTo('#final_1');
     var appendHere0 = $('#final_0').parent();
-    $('<div>').addClass('nameContainers').text(finalDate.image).appendTo(appendHere0);
+    // $('<div>').addClass('nameContainers').text(finalDate.image).appendTo(appendHere0);
     $('#final_0').css('background-image', 'url('+ finalDate.name+')');
-    $('<div>').addClass('nameContainers').text(finalDate.image).appendTo('#final_0');
+    // $('<div>').addClass('nameContainers').text(finalDate.image).appendTo('#final_0');
 }
 //Getting google maps for the locations
 function initialize(location) {
