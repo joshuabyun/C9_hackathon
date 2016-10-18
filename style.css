@@ -9,6 +9,10 @@ body > div{
     background-repeat: no-repeat;
     background-size: cover;
 }
+#warning{
+    position: fixed;
+    right:2%;
+}
 .header {
     text-align: center;
     /*background-color: #b71c1c;*/
