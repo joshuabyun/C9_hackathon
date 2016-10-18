@@ -132,9 +132,9 @@ function createDomPage2() {
         $('.main').append(dateDiv);
         var dateContainer = $('<div>').addClass('dateContainers').attr('id', 'second' + i);
         $(dateContainer).append(getPersonImagesArray[i]);
-        var nameContainer = $('<div>').addClass('nameContainers');
-        $(nameContainer).append(getNamesArray[i]);
-        $(dateDiv).append(dateContainer, nameContainer);
+        //var nameContainer = $('<div>').addClass('nameContainers');
+        //$(nameContainer).append(getNamesArray[i]);
+        $(dateDiv).append(dateContainer);//nameContainer
     }
 }
 //Getting random names function via ajax call
